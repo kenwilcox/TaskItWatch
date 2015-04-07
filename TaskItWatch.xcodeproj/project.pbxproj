@@ -38,6 +38,8 @@
 		BE4512E11AD3688E00EFF9DA /* TaskItWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskItWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4512E61AD3688E00EFF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4512E71AD3688E00EFF9DA /* TaskItWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItWatchTests.swift; sourceTree = "<group>"; };
+		BEBEBAEA1AD3698500402390 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BEBEBAEB1AD3698500402390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,8 @@
 		BE4512C01AD3688E00EFF9DA = {
 			isa = PBXGroup;
 			children = (
+				BEBEBAEA1AD3698500402390 /* LICENSE.md */,
+				BEBEBAEB1AD3698500402390 /* README.md */,
 				BE4512CB1AD3688E00EFF9DA /* TaskItWatch */,
 				BE4512E41AD3688E00EFF9DA /* TaskItWatchTests */,
 				BE4512CA1AD3688E00EFF9DA /* Products */,
@@ -411,6 +415,7 @@
 				BE4512ED1AD3688E00EFF9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE4512EE1AD3688E00EFF9DA /* Build configuration list for PBXNativeTarget "TaskItWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				BE4512F01AD3688E00EFF9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
