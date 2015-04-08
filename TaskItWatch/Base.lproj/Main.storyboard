@@ -42,11 +42,70 @@
                     <navigationItem key="navigationItem" id="E1x-MM-s95"/>
                     <connections>
                         <outlet property="tableView" destination="gC1-U5-m81" id="ruW-QV-6hD"/>
+                        <segue destination="jYd-8e-GyJ" kind="show" id="qdw-MM-oi4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="1022"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="RqE-AU-bkx">
+            <objects>
+                <viewController id="jYd-8e-GyJ" customClass="DetailViewController" customModule="TaskItWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1DE-hT-EpA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fc9-lD-aBL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cbe-xE-fIw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR0-Lb-dzd">
+                                <rect key="frame" x="85" y="0.0" width="300" height="145"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-Ud-dL5">
+                                <rect key="frame" x="16" y="80" width="61" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="jYd-8e-GyJ" eventType="touchUpInside" id="CRS-32-ZhU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5B-yM-7DH">
+                                <rect key="frame" x="16" y="153" width="369" height="194"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vOa-pE-3gp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZR9-UM-Fd8">
+                            <connections>
+                                <action selector="cancelBarButtonItemTapped:" destination="jYd-8e-GyJ" id="PrI-jU-VMg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gpG-fi-WUd">
+                            <connections>
+                                <action selector="saveBarButtonItemTapped:" destination="jYd-8e-GyJ" id="6D9-Cf-pEF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="L5B-yM-7DH" id="tJR-cp-D1b"/>
+                        <outlet property="doneButton" destination="lxi-Ud-dL5" id="o1a-h1-4tZ"/>
+                        <outlet property="titleTextView" destination="JR0-Lb-dzd" id="kCe-0D-BX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d38-K0-gHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DwI-Xh-l92">
