@@ -116,6 +116,8 @@
 		BE27C0491AD62943002F78D4 /* CoreDataShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE27C0511AD62943002F78D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE27C0521AD62943002F78D4 /* CoreDataShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataShareTests.swift; sourceTree = "<group>"; };
+		BE27C05F1AD62B79002F78D4 /* TaskItWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TaskItWatch.entitlements; sourceTree = "<group>"; };
+		BE27C0601AD62C18002F78D4 /* TaskItWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TaskItWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		BE4512C91AD3688E00EFF9DA /* TaskItWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskItWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4512CD1AD3688E00EFF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		BE27C01B1AD62853002F78D4 /* TaskItWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BE27C0601AD62C18002F78D4 /* TaskItWatch WatchKit Extension.entitlements */,
 				BE27C01E1AD62853002F78D4 /* InterfaceController.swift */,
 				BE27C0201AD62853002F78D4 /* Images.xcassets */,
 				BE27C01C1AD62853002F78D4 /* Supporting Files */,
@@ -273,6 +276,7 @@
 		BE4512CB1AD3688E00EFF9DA /* TaskItWatch */ = {
 			isa = PBXGroup;
 			children = (
+				BE27C05F1AD62B79002F78D4 /* TaskItWatch.entitlements */,
 				BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */,
 				BE4512D31AD3688E00EFF9DA /* ViewController.swift */,
 				BE27C0121AD41904002F78D4 /* DetailViewController.swift */,
@@ -445,6 +449,12 @@
 				TargetAttributes = {
 					BE27C0191AD62853002F78D4 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2367R6DXA6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BE27C0231AD62853002F78D4 = {
 						CreatedOnToolsVersion = 6.2;
@@ -458,6 +468,12 @@
 					};
 					BE4512C81AD3688E00EFF9DA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2367R6DXA6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BE4512E01AD3688E00EFF9DA = {
 						CreatedOnToolsVersion = 6.2;
@@ -680,6 +696,9 @@
 		BE27C0381AD62853002F78D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TaskItWatch WatchKit Extension/TaskItWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -687,6 +706,7 @@
 				INFOPLIST_FILE = "TaskItWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -694,9 +714,13 @@
 		BE27C0391AD62853002F78D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TaskItWatch WatchKit Extension/TaskItWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TaskItWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -856,10 +880,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaskItWatch/TaskItWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TaskItWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -867,10 +895,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaskItWatch/TaskItWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TaskItWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
