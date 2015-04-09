@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		BE27C0131AD41904002F78D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27C0121AD41904002F78D4 /* DetailViewController.swift */; };
 		BE27C0151AD6250E002F78D4 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27C0141AD6250E002F78D4 /* AddTaskViewController.swift */; };
+		BE27C01F1AD62853002F78D4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27C01E1AD62853002F78D4 /* InterfaceController.swift */; };
+		BE27C0211AD62853002F78D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE27C0201AD62853002F78D4 /* Images.xcassets */; };
+		BE27C0251AD62853002F78D4 /* TaskItWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = BE27C0241AD62853002F78D4 /* TaskItWatch WatchKit App.app */; };
+		BE27C02D1AD62853002F78D4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE27C02B1AD62853002F78D4 /* Interface.storyboard */; };
+		BE27C02F1AD62853002F78D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE27C02E1AD62853002F78D4 /* Images.xcassets */; };
+		BE27C0331AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE27C01A1AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BE4512CF1AD3688E00EFF9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */; };
 		BE4512D21AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */; };
 		BE4512D41AD3688E00EFF9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D31AD3688E00EFF9DA /* ViewController.swift */; };
@@ -19,6 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE27C0261AD62853002F78D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4512C11AD3688E00EFF9DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE27C0231AD62853002F78D4;
+			remoteInfo = "TaskItWatch WatchKit App";
+		};
+		BE27C0301AD62853002F78D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4512C11AD3688E00EFF9DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE27C0191AD62853002F78D4;
+			remoteInfo = "TaskItWatch WatchKit Extension";
+		};
 		BE4512E21AD3688E00EFF9DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE4512C11AD3688E00EFF9DA /* Project object */;
@@ -28,9 +48,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE27C0321AD62853002F78D4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BE27C0331AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BE27C0121AD41904002F78D4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE27C0141AD6250E002F78D4 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		BE27C01A1AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TaskItWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE27C01D1AD62853002F78D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE27C01E1AD62853002F78D4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		BE27C0201AD62853002F78D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE27C0241AD62853002F78D4 /* TaskItWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaskItWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE27C02A1AD62853002F78D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE27C02C1AD62853002F78D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		BE27C02E1AD62853002F78D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE4512C91AD3688E00EFF9DA /* TaskItWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskItWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4512CD1AD3688E00EFF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +89,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BE27C0171AD62853002F78D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE4512C61AD3688E00EFF9DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +113,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE27C01B1AD62853002F78D4 /* TaskItWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE27C01E1AD62853002F78D4 /* InterfaceController.swift */,
+				BE27C0201AD62853002F78D4 /* Images.xcassets */,
+				BE27C01C1AD62853002F78D4 /* Supporting Files */,
+			);
+			path = "TaskItWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		BE27C01C1AD62853002F78D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE27C01D1AD62853002F78D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE27C0281AD62853002F78D4 /* TaskItWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				BE27C02B1AD62853002F78D4 /* Interface.storyboard */,
+				BE27C02E1AD62853002F78D4 /* Images.xcassets */,
+				BE27C0291AD62853002F78D4 /* Supporting Files */,
+			);
+			path = "TaskItWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		BE27C0291AD62853002F78D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE27C02A1AD62853002F78D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BE4512C01AD3688E00EFF9DA = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +156,8 @@
 				BEBEBAEB1AD3698500402390 /* README.md */,
 				BE4512CB1AD3688E00EFF9DA /* TaskItWatch */,
 				BE4512E41AD3688E00EFF9DA /* TaskItWatchTests */,
+				BE27C01B1AD62853002F78D4 /* TaskItWatch WatchKit Extension */,
+				BE27C0281AD62853002F78D4 /* TaskItWatch WatchKit App */,
 				BE4512CA1AD3688E00EFF9DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +167,8 @@
 			children = (
 				BE4512C91AD3688E00EFF9DA /* TaskItWatch.app */,
 				BE4512E11AD3688E00EFF9DA /* TaskItWatchTests.xctest */,
+				BE27C01A1AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex */,
+				BE27C0241AD62853002F78D4 /* TaskItWatch WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +217,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BE27C0191AD62853002F78D4 /* TaskItWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE27C0371AD62853002F78D4 /* Build configuration list for PBXNativeTarget "TaskItWatch WatchKit Extension" */;
+			buildPhases = (
+				BE27C0161AD62853002F78D4 /* Sources */,
+				BE27C0171AD62853002F78D4 /* Frameworks */,
+				BE27C0181AD62853002F78D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE27C0271AD62853002F78D4 /* PBXTargetDependency */,
+			);
+			name = "TaskItWatch WatchKit Extension";
+			productName = "TaskItWatch WatchKit Extension";
+			productReference = BE27C01A1AD62853002F78D4 /* TaskItWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		BE27C0231AD62853002F78D4 /* TaskItWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE27C0341AD62853002F78D4 /* Build configuration list for PBXNativeTarget "TaskItWatch WatchKit App" */;
+			buildPhases = (
+				BE27C0221AD62853002F78D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TaskItWatch WatchKit App";
+			productName = "TaskItWatch WatchKit App";
+			productReference = BE27C0241AD62853002F78D4 /* TaskItWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		BE4512C81AD3688E00EFF9DA /* TaskItWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE4512EB1AD3688E00EFF9DA /* Build configuration list for PBXNativeTarget "TaskItWatch" */;
@@ -135,10 +257,12 @@
 				BE4512C51AD3688E00EFF9DA /* Sources */,
 				BE4512C61AD3688E00EFF9DA /* Frameworks */,
 				BE4512C71AD3688E00EFF9DA /* Resources */,
+				BE27C0321AD62853002F78D4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BE27C0311AD62853002F78D4 /* PBXTargetDependency */,
 			);
 			name = TaskItWatch;
 			productName = TaskItWatch;
@@ -172,6 +296,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Kenneth Wilcox";
 				TargetAttributes = {
+					BE27C0191AD62853002F78D4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					BE27C0231AD62853002F78D4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					BE4512C81AD3688E00EFF9DA = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -196,11 +326,31 @@
 			targets = (
 				BE4512C81AD3688E00EFF9DA /* TaskItWatch */,
 				BE4512E01AD3688E00EFF9DA /* TaskItWatchTests */,
+				BE27C0191AD62853002F78D4 /* TaskItWatch WatchKit Extension */,
+				BE27C0231AD62853002F78D4 /* TaskItWatch WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BE27C0181AD62853002F78D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE27C0251AD62853002F78D4 /* TaskItWatch WatchKit App.app in Resources */,
+				BE27C0211AD62853002F78D4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE27C0221AD62853002F78D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE27C02D1AD62853002F78D4 /* Interface.storyboard in Resources */,
+				BE27C02F1AD62853002F78D4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE4512C71AD3688E00EFF9DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +371,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BE27C0161AD62853002F78D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE27C01F1AD62853002F78D4 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE4512C51AD3688E00EFF9DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +402,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BE27C0271AD62853002F78D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE27C0231AD62853002F78D4 /* TaskItWatch WatchKit App */;
+			targetProxy = BE27C0261AD62853002F78D4 /* PBXContainerItemProxy */;
+		};
+		BE27C0311AD62853002F78D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE27C0191AD62853002F78D4 /* TaskItWatch WatchKit Extension */;
+			targetProxy = BE27C0301AD62853002F78D4 /* PBXContainerItemProxy */;
+		};
 		BE4512E31AD3688E00EFF9DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE4512C81AD3688E00EFF9DA /* TaskItWatch */;
@@ -252,6 +420,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BE27C02B1AD62853002F78D4 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE27C02C1AD62853002F78D4 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		BE4512D51AD3688E00EFF9DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,6 +447,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BE27C0351AD62853002F78D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = TaskItWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "TaskItWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		BE27C0361AD62853002F78D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = TaskItWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "TaskItWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		BE27C0381AD62853002F78D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TaskItWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BE27C0391AD62853002F78D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TaskItWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		BE4512E91AD3688E00EFF9DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -354,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TaskItWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TaskItWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +639,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BE27C0341AD62853002F78D4 /* Build configuration list for PBXNativeTarget "TaskItWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE27C0351AD62853002F78D4 /* Debug */,
+				BE27C0361AD62853002F78D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE27C0371AD62853002F78D4 /* Build configuration list for PBXNativeTarget "TaskItWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE27C0381AD62853002F78D4 /* Debug */,
+				BE27C0391AD62853002F78D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BE4512C41AD3688E00EFF9DA /* Build configuration list for PBXProject "TaskItWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
