@@ -43,6 +43,7 @@
                     <connections>
                         <outlet property="tableView" destination="gC1-U5-m81" id="ruW-QV-6hD"/>
                         <segue destination="jYd-8e-GyJ" kind="show" id="qdw-MM-oi4"/>
+                        <segue destination="EgP-9E-JmD" kind="push" id="EoF-vF-JwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,6 +107,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d38-K0-gHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="682"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="vuQ-SE-fg4">
+            <objects>
+                <viewController id="EgP-9E-JmD" customClass="AddTaskViewController" customModule="TaskItWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jfj-aF-OeP"/>
+                        <viewControllerLayoutGuide type="bottom" id="NRd-ar-lXF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dok-GU-WUr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-TY-ZY7">
+                                <rect key="frame" x="10" y="0.0" width="300" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBe-nm-Rhm">
+                                <rect key="frame" x="10" y="133" width="300" height="231"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UfO-dv-oqe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9CW-ig-piZ">
+                            <connections>
+                                <action selector="cancelBarButtonItemPressed:" destination="EgP-9E-JmD" id="SQR-Ks-DJl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hMw-2A-CEz">
+                            <connections>
+                                <action selector="saveBarButtonItemPressed:" destination="EgP-9E-JmD" id="4TC-os-ANT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="yBe-nm-Rhm" id="zpZ-U7-Kqg"/>
+                        <outlet property="titleTextView" destination="lWb-TY-ZY7" id="VJC-RX-Yxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DvT-uE-c0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="1353"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DwI-Xh-l92">

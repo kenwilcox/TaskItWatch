@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE27C0131AD41904002F78D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27C0121AD41904002F78D4 /* DetailViewController.swift */; };
+		BE27C0151AD6250E002F78D4 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27C0141AD6250E002F78D4 /* AddTaskViewController.swift */; };
 		BE4512CF1AD3688E00EFF9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */; };
 		BE4512D21AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */; };
 		BE4512D41AD3688E00EFF9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D31AD3688E00EFF9DA /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		BE27C0121AD41904002F78D4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE27C0141AD6250E002F78D4 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		BE4512C91AD3688E00EFF9DA /* TaskItWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskItWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4512CD1AD3688E00EFF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				BE4512CE1AD3688E00EFF9DA /* AppDelegate.swift */,
 				BE4512D31AD3688E00EFF9DA /* ViewController.swift */,
 				BE27C0121AD41904002F78D4 /* DetailViewController.swift */,
+				BE27C0141AD6250E002F78D4 /* AddTaskViewController.swift */,
 				BE4512D51AD3688E00EFF9DA /* Main.storyboard */,
 				BE4512D81AD3688E00EFF9DA /* Images.xcassets */,
 				BE4512DA1AD3688E00EFF9DA /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 				BE4512CF1AD3688E00EFF9DA /* AppDelegate.swift in Sources */,
 				BE4512D21AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld in Sources */,
 				BE27C0131AD41904002F78D4 /* DetailViewController.swift in Sources */,
+				BE27C0151AD6250E002F78D4 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
