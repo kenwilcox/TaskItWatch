@@ -42,8 +42,8 @@
                     <navigationItem key="navigationItem" id="E1x-MM-s95"/>
                     <connections>
                         <outlet property="tableView" destination="gC1-U5-m81" id="ruW-QV-6hD"/>
-                        <segue destination="jYd-8e-GyJ" kind="show" id="qdw-MM-oi4"/>
-                        <segue destination="EgP-9E-JmD" kind="push" id="EoF-vF-JwW"/>
+                        <segue destination="jYd-8e-GyJ" kind="show" identifier="toDetailTaskSegue" id="qdw-MM-oi4"/>
+                        <segue destination="EgP-9E-JmD" kind="show" identifier="toAddTaskSegue" id="EoF-vF-JwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
