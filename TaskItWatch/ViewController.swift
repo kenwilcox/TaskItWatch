@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreDataShare
+import CoreData
 
 class ViewController: UIViewController {
   
@@ -16,6 +17,21 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    let context = CoreDataManager.sharedInstance.managedObjectContext
+    let entityDescription = NSEntityDescription.entityForName("Task", inManagedObjectContext: context!)
+    let task = Task(entity: entityDescription!, insertIntoManagedObjectContext: context!)
+    
+    task.descriptionName = "Description"
+    task.titleName = "title"
+    task.date = NSDate()
+    
+    CoreDataManager.sharedInstance.saveContext()
+    
+    var request = NSFetchRequest(entityName: "Task")
+    var error: NSError?
+    let fetchedResults = CoreDataManager.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: &error)
+    println(fetchedResults!.count)
   }
   
   override func didReceiveMemoryWarning() {
