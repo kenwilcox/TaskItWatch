@@ -11,6 +11,10 @@ import CoreData
 
 public class CoreDataManager: NSObject {
   
+  private override init() {
+    
+  }
+  
   public class var sharedInstance : CoreDataManager {
     struct Static {
       static var onceToken : dispatch_once_t = 0
