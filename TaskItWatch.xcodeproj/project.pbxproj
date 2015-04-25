@@ -29,6 +29,7 @@
 		BE4512E81AD3688E00EFF9DA /* TaskItWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4512E71AD3688E00EFF9DA /* TaskItWatchTests.swift */; };
 		BE8977C91AEA759D004AB38A /* TaskItWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */; };
 		BE8977CB1AEB41D5004AB38A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CA1AEB41D5004AB38A /* Task.swift */; };
+		BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		BE4512E61AD3688E00EFF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4512E71AD3688E00EFF9DA /* TaskItWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItWatchTests.swift; sourceTree = "<group>"; };
 		BE8977CA1AEB41D5004AB38A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BEBEBAEA1AD3698500402390 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BEBEBAEB1AD3698500402390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,9 +219,10 @@
 		BE27C0401AD62942002F78D4 /* CoreDataShare */ = {
 			isa = PBXGroup;
 			children = (
-				BE8977CA1AEB41D5004AB38A /* Task.swift */,
 				BE27C0431AD62942002F78D4 /* CoreDataShare.h */,
+				BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */,
 				BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */,
+				BE8977CA1AEB41D5004AB38A /* Task.swift */,
 				BE27C0411AD62942002F78D4 /* Supporting Files */,
 			);
 			path = CoreDataShare;
@@ -574,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */,
 				BE8977CB1AEB41D5004AB38A /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
