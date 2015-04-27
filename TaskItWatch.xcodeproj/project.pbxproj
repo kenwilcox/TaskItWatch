@@ -30,6 +30,7 @@
 		BE8977C91AEA759D004AB38A /* TaskItWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */; };
 		BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */; };
 		BE8977CF1AEB4F68004AB38A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CE1AEB4F68004AB38A /* Task.swift */; };
+		BEE49EB51AEE77F100018DFC /* TaskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE49EB41AEE77F100018DFC /* TaskHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		BE8977CE1AEB4F68004AB38A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		BEBEBAEA1AD3698500402390 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BEBEBAEB1AD3698500402390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BEE49EB41AEE77F100018DFC /* TaskHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			children = (
 				BE27C0431AD62942002F78D4 /* CoreDataShare.h */,
 				BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */,
+				BEE49EB41AEE77F100018DFC /* TaskHelper.swift */,
 				BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */,
 				BE8977CE1AEB4F68004AB38A /* Task.swift */,
 				BE27C0411AD62942002F78D4 /* Supporting Files */,
@@ -578,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE8977CF1AEB4F68004AB38A /* Task.swift in Sources */,
+				BEE49EB51AEE77F100018DFC /* TaskHelper.swift in Sources */,
 				BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
