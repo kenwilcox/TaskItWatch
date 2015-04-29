@@ -39,6 +39,8 @@ public class TaskHelper: NSObject {
   }
   
   public func switchCompletion(task: Task) {
+    task.isCompleted != task.isCompleted
+    CoreDataManager.sharedInstance.saveContext()
   }
   
   public func deleteTask (task: Task) {
