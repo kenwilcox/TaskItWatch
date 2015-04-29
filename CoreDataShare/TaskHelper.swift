@@ -44,6 +44,7 @@ public class TaskHelper: NSObject {
   }
   
   public func deleteTask (task: Task) {
+    CoreDataManager.sharedInstance.managedObjectContext?.deleteObject(task)
   }
   
   public func getTasks() -> [AnyObject] {
