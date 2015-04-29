@@ -27,6 +27,15 @@ public class TaskHelper: NSObject {
   }
   
   public func insertNewObject(title: String, description: String, date: NSDate) {
+    let context = CoreDataManager.sharedInstance.managedObjectContext
+    let entityDescription = NSEntityDescription.entityForName("Task", inManagedObjectContext: context!)
+    let task = Task(entity: entityDescription!, insertIntoManagedObjectContext: context!)
+    
+    task.descriptionName = description
+    task.titleName = title
+    task.date = date
+    
+    CoreDataManager.sharedInstance.saveContext()
   }
   
   public func switchCompletion(task: Task) {
