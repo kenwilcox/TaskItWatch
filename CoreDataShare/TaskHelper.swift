@@ -48,6 +48,16 @@ public class TaskHelper: NSObject {
   }
   
   public func getTasks() -> [AnyObject] {
-    return [] as [AnyObject]
+    var request = NSFetchRequest()
+    request.entity = NSEntityDescription.entityForName("Task", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext!)
+    request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+    
+    var error:NSError? = nil
+    var results = CoreDataManager.sharedInstance.managedObjectContext?.executeFetchRequest(request, error: &error)
+    
+    // TODO: actually handle the error
+    println(error?.description)
+    
+    return results!
   }
 }
