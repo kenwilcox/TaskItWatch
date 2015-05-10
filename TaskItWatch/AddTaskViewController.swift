@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreDataShare
 
 class AddTaskViewController: UIViewController {
   
@@ -24,10 +25,11 @@ class AddTaskViewController: UIViewController {
   }
   
   @IBAction func cancelBarButtonItemPressed(sender: UIBarButtonItem) {
-    
+    self.navigationController?.popViewControllerAnimated(true)
   }
   
   @IBAction func saveBarButtonItemPressed(sender: UIBarButtonItem) {
-    
+    TaskHelper.sharedInstance.insertNewObject(self.titleTextView.text, description: self.bodyTextView.text, date: NSDate())
+    self.navigationController?.popViewControllerAnimated(true)
   }
 }
