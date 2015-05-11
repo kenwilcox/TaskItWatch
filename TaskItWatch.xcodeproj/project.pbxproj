@@ -30,6 +30,7 @@
 		BE8977C91AEA759D004AB38A /* TaskItWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */; };
 		BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */; };
 		BE8977CF1AEB4F68004AB38A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CE1AEB4F68004AB38A /* Task.swift */; };
+		BECA046C1B0052B6001E34A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA046B1B0052B6001E34A0 /* TaskRow.swift */; };
 		BEE49EB51AEE77F100018DFC /* TaskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE49EB41AEE77F100018DFC /* TaskHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		BE8977CE1AEB4F68004AB38A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		BEBEBAEA1AD3698500402390 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BEBEBAEB1AD3698500402390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BECA046B1B0052B6001E34A0 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		BEE49EB41AEE77F100018DFC /* TaskHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 			children = (
 				BE27C0601AD62C18002F78D4 /* TaskItWatch WatchKit Extension.entitlements */,
 				BE27C01E1AD62853002F78D4 /* InterfaceController.swift */,
+				BECA046B1B0052B6001E34A0 /* TaskRow.swift */,
 				BE27C0201AD62853002F78D4 /* Images.xcassets */,
 				BE27C01C1AD62853002F78D4 /* Supporting Files */,
 			);
@@ -571,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECA046C1B0052B6001E34A0 /* TaskRow.swift in Sources */,
 				BE27C01F1AD62853002F78D4 /* InterfaceController.swift in Sources */,
 				BE8977C91AEA759D004AB38A /* TaskItWatch.xcdatamodeld in Sources */,
 			);
