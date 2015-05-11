@@ -61,4 +61,12 @@ public class TaskHelper: NSObject {
     
     return results!
   }
+  
+  public func getDoneColor() -> UIColor {
+    return UIColor(red: 0.80, green: 0.93, blue: 0.84, alpha: 1.0)
+  }
+  
+  public func getNotDoneColor() -> UIColor {
+    return UIColor(red: 0.93, green: 0.80, blue: 0.80, alpha: 1.0)
+  }
 }

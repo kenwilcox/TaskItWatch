@@ -53,10 +53,10 @@ class DetailViewController: UIViewController {
   
   func updateDoneButton() {
     if task.isCompleted == true {
-      doneButton.backgroundColor = UIColor(red: 0.80, green: 0.93, blue: 0.84, alpha: 1.0)
+      doneButton.backgroundColor = TaskHelper.sharedInstance.getDoneColor()
       doneButton.setTitle("X", forState: UIControlState.Normal)
     } else {
-      doneButton.backgroundColor = UIColor(red: 0.93, green: 0.80, blue: 0.80, alpha: 1.0)
+      doneButton.backgroundColor = TaskHelper.sharedInstance.getNotDoneColor()
       doneButton.setTitle("✓", forState: UIControlState.Normal)
     }
   }
