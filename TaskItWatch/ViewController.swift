@@ -30,10 +30,16 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "toDetailTaskSegue" {
+      let detailVC = segue.destinationViewController as! DetailViewController
+      detailVC.task = sender as! Task
+    }
+  }
+  
   @IBAction func addTaskBarButtonItemPressed(sender: UIBarButtonItem) {
     self.performSegueWithIdentifier("toAddTaskSegue", sender: nil)
   }
-
 }
 
 // MARK: - UITableViewDataSource
@@ -69,7 +75,8 @@ extension ViewController: UITableViewDataSource
 extension ViewController: UITableViewDelegate
 {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+    let task = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Task
+    self.performSegueWithIdentifier("toDetailTaskSegue", sender: task)
   }
   
   func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -89,9 +96,9 @@ extension ViewController: UITableViewDelegate
 // MARK: - FetchedResultsControllerDelegate
 extension ViewController: NSFetchedResultsControllerDelegate
 {
-  func setupFetchedResultsController () {
-    var fetchRequest = NSFetchRequest()
-    var context = CoreDataManager.sharedInstance.managedObjectContext!
+  func setupFetchedResultsController() {
+    let fetchRequest = NSFetchRequest()
+    let context = CoreDataManager.sharedInstance.managedObjectContext!
     
     let entity = NSEntityDescription.entityForName("Task", inManagedObjectContext: context)
     fetchRequest.entity = entity

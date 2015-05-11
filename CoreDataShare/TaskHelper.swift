@@ -39,7 +39,7 @@ public class TaskHelper: NSObject {
   }
   
   public func switchCompletion(task: Task) {
-    task.isCompleted != task.isCompleted
+    task.isCompleted = !Bool(task.isCompleted)
     CoreDataManager.sharedInstance.saveContext()
   }
   
