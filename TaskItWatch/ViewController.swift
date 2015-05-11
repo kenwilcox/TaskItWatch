@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.setupFetchedResultsController()
+    
     self.tableView.dataSource = self
     self.tableView.delegate = self
   }
@@ -38,15 +40,28 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource
 {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 0
+    return fetchedResultsController.sections!.count
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
+    return sectionInfo.numberOfObjects
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+    let task = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Task
+    
+    cell.textLabel!.text = task.titleName
+    
+    if task.isCompleted == true {
+      cell.backgroundColor = UIColor(red: 0.80, green: 0.93, blue: 0.84, alpha: 1.0)
+    } else {
+      cell.backgroundColor = UIColor(red: 0.93, green: 0.80, blue: 0.80, alpha: 1.0)
+    }
+    
+    return cell
   }
 }
 
@@ -86,5 +101,9 @@ extension ViewController: NSFetchedResultsControllerDelegate
     if !self.fetchedResultsController!.performFetch(&error) {
       println("An error Occured \(error)")
     }
+  }
+  
+  func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    self.tableView.reloadData()
   }
 }
