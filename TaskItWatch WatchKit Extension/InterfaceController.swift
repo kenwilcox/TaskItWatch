@@ -39,9 +39,13 @@ class InterfaceController: WKInterfaceController {
       self.table.setNumberOfRows(self.tasks.count, withRowType: "TaskRowCell")
       
       for var index = 0; index < tasks.count; index++ {
-        var theRow = self.table.rowControllerAtIndex(index) as! TaskRow
+        let theRow = self.table.rowControllerAtIndex(index) as! TaskRow
         let task = self.tasks[index] as! Task
+        
         theRow.textLabel.setText(task.titleName)
+        theRow.completion = Bool(task.isCompleted)
+        theRow.tag = index
+        theRow.delegate = self
         
         if task.isCompleted == true {
           theRow.completionButton.setBackgroundColor(TaskHelper.sharedInstance.getDoneColor())
@@ -57,4 +61,12 @@ class InterfaceController: WKInterfaceController {
     self.tasks = TaskHelper.sharedInstance.getTasks()
   }
   
+}
+
+// MARK: - TaskRowDelegate
+extension InterfaceController: TaskRowDelegate {
+  func completedButtonWasTapped(tag: Int) {
+    var task = self.tasks[tag] as! Task
+    TaskHelper.sharedInstance.switchCompletion(task)
+  }
 }
