@@ -78,6 +78,11 @@ extension ViewController: UITableViewDelegate
   
   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     
+    if editingStyle == UITableViewCellEditingStyle.Delete {
+      let task = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Task
+      TaskHelper.sharedInstance.deleteTask(task)
+    }
+    
   }
 }
 
