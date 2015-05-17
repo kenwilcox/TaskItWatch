@@ -48,9 +48,9 @@ class InterfaceController: WKInterfaceController {
         theRow.delegate = self
         
         if task.isCompleted == true {
-          theRow.completionButton.setBackgroundColor(TaskHelper.sharedInstance.getDoneColor())
+          theRow.completionButton.setBackgroundColor(TaskHelper.getDoneColor())
         } else {
-          theRow.completionButton.setBackgroundColor(TaskHelper.sharedInstance.getNotDoneColor())
+          theRow.completionButton.setBackgroundColor(TaskHelper.getNotDoneColor())
         }
       }
       

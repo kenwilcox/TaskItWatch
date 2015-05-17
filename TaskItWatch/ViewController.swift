@@ -62,9 +62,9 @@ extension ViewController: UITableViewDataSource
     cell.textLabel!.text = task.titleName
     
     if task.isCompleted == true {
-      cell.backgroundColor = TaskHelper.sharedInstance.getDoneColor()
+      cell.backgroundColor = TaskHelper.getDoneColor()
     } else {
-      cell.backgroundColor = TaskHelper.sharedInstance.getNotDoneColor()
+      cell.backgroundColor = TaskHelper.getNotDoneColor()
     }
     
     return cell

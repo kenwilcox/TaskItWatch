@@ -27,10 +27,10 @@ class TaskRow: NSObject {
     
     if self.completion == true {
       self.completion = false
-      self.completionButton.setBackgroundColor(TaskHelper.sharedInstance.getNotDoneColor())
+      self.completionButton.setBackgroundColor(TaskHelper.getNotDoneColor())
     } else {
       self.completion = true
-      self.completionButton.setBackgroundColor(TaskHelper.sharedInstance.getDoneColor())
+      self.completionButton.setBackgroundColor(TaskHelper.getDoneColor())
     }
     
     self.delegate?.completedButtonWasTapped(self.tag)
