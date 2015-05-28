@@ -51,6 +51,8 @@ class InterfaceController: WKInterfaceController {
         let theRow = self.table.rowControllerAtIndex(index) as! TaskRow
         let task = self.tasks[index] as! Task
         
+        CoreDataManager.sharedInstance.managedObjectContext?.refreshObject(task, mergeChanges: true)
+        
         theRow.textLabel.setText(task.titleName)
         theRow.completion = Bool(task.isCompleted)
         theRow.tag = index
@@ -77,5 +79,7 @@ extension InterfaceController: TaskRowDelegate {
   func completedButtonWasTapped(tag: Int) {
     var task = self.tasks[tag] as! Task
     TaskHelper.sharedInstance.switchCompletion(task)
+    
+    wormHole.passMessageObject(["completed": task.isCompleted], identifier: GlobalConstants.taskChangeOnWatch)
   }
 }

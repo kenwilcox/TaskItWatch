@@ -34,6 +34,7 @@ public class TaskHelper: NSObject {
     task.descriptionName = description
     task.titleName = title
     task.date = date
+    task.isCompleted = false
     
     CoreDataManager.sharedInstance.saveContext()
   }

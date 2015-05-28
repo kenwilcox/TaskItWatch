@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     if segue.identifier == "toDetailTaskSegue" {
       let detailVC = segue.destinationViewController as! DetailViewController
       detailVC.task = sender as! Task
+      detailVC.delegate = self
     }
   }
   
@@ -127,5 +128,13 @@ extension ViewController: NSFetchedResultsControllerDelegate
   
   func controllerDidChangeContent(controller: NSFetchedResultsController) {
     self.tableView.reloadData()
+  }
+}
+
+// MARK: - TaskDetailViewControllerDelegate
+extension ViewController: DetailViewControllerDelegate {
+  func taskDetailEdited(task: Task) {
+    println("taskDetailEdited")
+    wormHole.passMessageObject(["completed": task.isCompleted], identifier: GlobalConstants.taskChangeOnPhone)
   }
 }

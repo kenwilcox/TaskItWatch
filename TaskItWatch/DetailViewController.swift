@@ -9,11 +9,16 @@
 import UIKit
 import CoreDataShare
 
+@objc protocol DetailViewControllerDelegate {
+  optional func taskDetailEdited(task: Task)
+}
+
 class DetailViewController: UIViewController {
   
   @IBOutlet weak var titleTextView: UITextView!
   @IBOutlet weak var bodyTextView: UITextView!
   @IBOutlet weak var doneButton: UIButton!
+  var delegate: DetailViewControllerDelegate?
   
   var task: Task!
   
@@ -43,6 +48,7 @@ class DetailViewController: UIViewController {
   @IBAction func doneButtonPressed(sender: UIButton) {
     TaskHelper.sharedInstance.switchCompletion(self.task)
     updateDoneButton()
+    delegate?.taskDetailEdited!(self.task)
   }
   
   func setupViewWithTask() {
