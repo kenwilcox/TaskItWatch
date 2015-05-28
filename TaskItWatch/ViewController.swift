@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     self.wormHole = MMWormhole(applicationGroupIdentifier: GlobalConstants.groupIdentifier, optionalDirectory: "wormhole")
     
     self.wormHole.listenForMessageWithIdentifier(GlobalConstants.taskChangeOnWatch, listener: { (objectPassed) -> Void in
-      println(objectPassed)
+      println("ViewController /(objectPassed)")
       var fetchError: NSError?
       self.fetchedResultsController.performFetch(&fetchError)
       self.tableView.reloadData()
@@ -69,6 +69,7 @@ extension ViewController: UITableViewDataSource
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
     let task = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Task
+    CoreDataManager.sharedInstance.managedObjectContext?.refreshObject(task, mergeChanges: true)
     
     cell.textLabel!.text = task.titleName
     
@@ -135,6 +136,6 @@ extension ViewController: NSFetchedResultsControllerDelegate
 extension ViewController: DetailViewControllerDelegate {
   func taskDetailEdited(task: Task) {
     println("taskDetailEdited")
-    wormHole.passMessageObject(["completed": task.isCompleted], identifier: GlobalConstants.taskChangeOnPhone)
+    self.wormHole.passMessageObject(["completed": task.isCompleted], identifier: GlobalConstants.taskChangeOnPhone)
   }
 }

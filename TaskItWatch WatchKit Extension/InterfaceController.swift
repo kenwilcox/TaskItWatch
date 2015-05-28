@@ -26,7 +26,7 @@ class InterfaceController: WKInterfaceController {
     self.wormHole = MMWormhole(applicationGroupIdentifier: GlobalConstants.groupIdentifier, optionalDirectory: "wormhole")
     
     self.wormHole.listenForMessageWithIdentifier(GlobalConstants.taskChangeOnPhone, listener: { (objectPassed) -> Void in
-      println(objectPassed)
+      println("Interface Controller \(objectPassed)")
       self.updateTasks()
       self.updateTable()
     })
