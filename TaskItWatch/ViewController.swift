@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     self.tableView.dataSource = self
     self.tableView.delegate = self
     
-    self.wormHole = MMWormhole(applicationGroupIdentifier: "group.TaskItWatch.k3nx.com", optionalDirectory: "wormhole")
+    self.wormHole = MMWormhole(applicationGroupIdentifier: GlobalConstants.groupIdentifier, optionalDirectory: "wormhole")
     
     self.wormHole.listenForMessageWithIdentifier(GlobalConstants.taskChangeOnWatch, listener: { (objectPassed) -> Void in
       println(objectPassed)

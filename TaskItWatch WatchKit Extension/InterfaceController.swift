@@ -14,6 +14,7 @@ class InterfaceController: WKInterfaceController {
   
   @IBOutlet weak var table: WKInterfaceTable!
   var tasks: [AnyObject]!
+  var wormHole: MMWormhole!
   
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
@@ -21,6 +22,14 @@ class InterfaceController: WKInterfaceController {
     // Configure interface objects here.
     updateTasks()
     updateTable()
+    
+    self.wormHole = MMWormhole(applicationGroupIdentifier: GlobalConstants.groupIdentifier, optionalDirectory: "wormhole")
+    
+    self.wormHole.listenForMessageWithIdentifier(GlobalConstants.taskChangeOnPhone, listener: { (objectPassed) -> Void in
+      println(objectPassed)
+      self.updateTasks()
+      self.updateTable()
+    })
   }
   
   override func willActivate() {

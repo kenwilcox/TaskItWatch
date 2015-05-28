@@ -11,5 +11,7 @@ import Foundation
 public struct GlobalConstants {
   
   public static let taskChangeOnWatch = "taskChangeOnWatch"
-
+  public static let taskChangeOnPhone = "taskChangeOnPhone"
+  
+  public static let groupIdentifier = "group.TaskItWatch.k3nx.com"
 }
