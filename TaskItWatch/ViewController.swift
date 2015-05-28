@@ -14,6 +14,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   var fetchedResultsController: NSFetchedResultsController!
+  var wormHole: MMWormhole!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,6 +24,15 @@ class ViewController: UIViewController {
     
     self.tableView.dataSource = self
     self.tableView.delegate = self
+    
+    self.wormHole = MMWormhole(applicationGroupIdentifier: "group.TaskItWatch.k3nx.com", optionalDirectory: "wormhole")
+    
+    self.wormHole.listenForMessageWithIdentifier(GlobalConstants.taskChangeOnWatch, listener: { (objectPassed) -> Void in
+      println(objectPassed)
+      var fetchError: NSError?
+      self.fetchedResultsController.performFetch(&fetchError)
+      self.tableView.reloadData()
+    })
   }
   
   override func didReceiveMemoryWarning() {

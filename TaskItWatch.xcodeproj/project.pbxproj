@@ -32,6 +32,7 @@
 		BE8977CF1AEB4F68004AB38A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8977CE1AEB4F68004AB38A /* Task.swift */; };
 		BEB9E3F51B16D16A0064EF0B /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB9E3F31B16D16A0064EF0B /* MMWormhole.h */; };
 		BEB9E3F61B16D16A0064EF0B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E3F41B16D16A0064EF0B /* MMWormhole.m */; };
+		BEB9E3FA1B16D9C50064EF0B /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E3F91B16D9C50064EF0B /* GlobalConstants.swift */; };
 		BECA046C1B0052B6001E34A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA046B1B0052B6001E34A0 /* TaskRow.swift */; };
 		BEE49EB51AEE77F100018DFC /* TaskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE49EB41AEE77F100018DFC /* TaskHelper.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 		BEB9E3F31B16D16A0064EF0B /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		BEB9E3F41B16D16A0064EF0B /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
 		BEB9E3F81B16D22A0064EF0B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		BEB9E3F91B16D9C50064EF0B /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		BEBEBAEA1AD3698500402390 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BEBEBAEB1AD3698500402390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BECA046B1B0052B6001E34A0 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				BEB9E3F71B16D1740064EF0B /* MMWormhole */,
 				BE27C0431AD62942002F78D4 /* CoreDataShare.h */,
 				BE8977CC1AEB432A004AB38A /* CoreDataManager.swift */,
+				BEB9E3F91B16D9C50064EF0B /* GlobalConstants.swift */,
 				BEE49EB41AEE77F100018DFC /* TaskHelper.swift */,
 				BE4512D01AD3688E00EFF9DA /* TaskItWatch.xcdatamodeld */,
 				BE8977CE1AEB4F68004AB38A /* Task.swift */,
@@ -603,6 +606,7 @@
 			files = (
 				BE8977CF1AEB4F68004AB38A /* Task.swift in Sources */,
 				BEE49EB51AEE77F100018DFC /* TaskHelper.swift in Sources */,
+				BEB9E3FA1B16D9C50064EF0B /* GlobalConstants.swift in Sources */,
 				BEB9E3F61B16D16A0064EF0B /* MMWormhole.m in Sources */,
 				BE8977CD1AEB432A004AB38A /* CoreDataManager.swift in Sources */,
 			);
