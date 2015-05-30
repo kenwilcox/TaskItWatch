@@ -9,10 +9,16 @@
 import UIKit
 import CoreDataShare
 
+@objc protocol AddTaskViewControllerDelegate {
+  optional func taskAdded(taskName: String)
+}
+
 class AddTaskViewController: UIViewController {
   
   @IBOutlet weak var titleTextView: UITextView!
   @IBOutlet weak var bodyTextView: UITextView!
+  var delegate: AddTaskViewControllerDelegate?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -30,6 +36,7 @@ class AddTaskViewController: UIViewController {
   
   @IBAction func saveBarButtonItemPressed(sender: UIBarButtonItem) {
     TaskHelper.sharedInstance.insertNewObject(self.titleTextView.text, description: self.bodyTextView.text, date: NSDate())
+    delegate?.taskAdded!(self.titleTextView.text)
     self.navigationController?.popViewControllerAnimated(true)
   }
 }

@@ -45,6 +45,11 @@ class ViewController: UIViewController {
       let detailVC = segue.destinationViewController as! DetailViewController
       detailVC.task = sender as! Task
       detailVC.delegate = self
+    } else if segue.identifier == "toAddTaskSegue" {
+      let addTaskVC = segue.destinationViewController as! AddTaskViewController
+      addTaskVC.delegate = self
+    } else {
+      println("Segue not handled \(segue.identifier)")
     }
   }
   
@@ -132,10 +137,19 @@ extension ViewController: NSFetchedResultsControllerDelegate
   }
 }
 
-// MARK: - TaskDetailViewControllerDelegate
+// MARK: - DetailViewControllerDelegate
 extension ViewController: DetailViewControllerDelegate {
   func taskDetailEdited(task: Task) {
     println("taskDetailEdited")
     self.wormHole.passMessageObject(["completed": task.isCompleted], identifier: GlobalConstants.taskChangeOnPhone)
   }
 }
+
+// MARK: - AddTaskViewControllerDelegate
+extension ViewController: AddTaskViewControllerDelegate {
+  func taskAdded(taskName: String) {
+    println("taskAdded")
+    self.wormHole.passMessageObject(["taskName": taskName], identifier: GlobalConstants.taskChangeOnPhone)
+  }
+}
+
