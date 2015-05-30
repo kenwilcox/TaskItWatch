@@ -58,7 +58,7 @@ public class TaskHelper: NSObject {
     var results = CoreDataManager.sharedInstance.managedObjectContext?.executeFetchRequest(request, error: &error)
     
     // TODO: actually handle the error
-    println(error?.description)
+    //println(error?.description)
     
     return results!
   }
